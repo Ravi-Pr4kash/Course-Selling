@@ -1,17 +1,21 @@
-const { Router } = require('express');
-const courseRouter = Router();
+const { Router }  = require("express")
+const courseRouter = Router()
+const { courseModel } = require('../db')
 
-courseRouter.post('/purchase',(req,res)=>{
+
+
+courseRouter.get('/preview', function(req,res){
+
 
 })
 
 
-courseRouter.get('/preview',(req,res)=>{
-     res.json({
-        message: "ye le courses"
-     })
-})
+
+ courseRouter.post('/purchase', function(req,res){ //jab user ko koi course khridna hoga tab 
+
+ })
+
 
 module.exports = {
-    courseRouter: courseRouter 
+    courseRouter: courseRouter
 }
